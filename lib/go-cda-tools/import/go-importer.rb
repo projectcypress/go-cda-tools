@@ -10,8 +10,9 @@ module GoCDATools
         ffi_lib File.expand_path("../../../ext/libgocda.so", File.dirname(__FILE__))
         attach_function :import_cat1, [:string], :string
 
-        def parse_with_ffi(path)
-          patient_json_string = import_cat1(path)
+        def parse_with_ffi(file)
+          data = file.kind_of?(String) ? file : file.inner_html
+          patient_json_string = import_cat1(data)
           patient = Record.new(JSON.parse(patient_json_string))
           patient
         end
