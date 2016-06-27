@@ -104,6 +104,3 @@ DEPENDENCIES
   os
   pry
   rake
-
-BUNDLED WITH
-   1.12.5

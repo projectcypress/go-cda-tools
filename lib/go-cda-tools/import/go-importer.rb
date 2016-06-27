@@ -12,7 +12,7 @@ module GoCDATools
           ffi_lib File.expand_path("../../../ext/libgocda-linux.so", File.dirname(__FILE__))
         end
       	if OS.mac?
-      	  ffi_lib File.expant_path("../../../ext/libgocda-mac.so", File.dirname(__FILE__))
+      	  ffi_lib File.expand_path("../../../ext/libgocda-mac.so", File.dirname(__FILE__))
       	end
         attach_function :import_cat1, [:string], :string
 
