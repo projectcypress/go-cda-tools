@@ -23,6 +23,6 @@ func generateCat1(patient *C.char, startDate C.long, endDate C.long, qrdaVersion
 }
 
 //export exporterCat1Init
-func exporterCat1Init(measures *C.char, valueSets *C.char, qrdaVersion *C.char) {
-	exporter.ExporterCat1Init([]byte(C.GoString(measures)), []byte(C.GoString(valueSets)), C.GoString(qrdaVersion))
+func exporterCat1Init(measures *C.char, valueSets *C.char) {
+	exporter.ExporterCat1Init([]byte(C.GoString(measures)), []byte(C.GoString(valueSets)))
 }
